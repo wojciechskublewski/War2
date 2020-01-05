@@ -3,6 +3,17 @@ import argparse
 from clcrypto import check_password
 from database import get_connection, get_cursor
 
+# u = User()
+# u.email = "wojciech.skublewski@wp.pl"
+# u.username = "wojciech.skublewski"
+# u.set_password("Wojtek123")
+#
+# connection = get_connection()
+# cursor = get_cursor(connection)
+#
+# u.save_to_db(cursor)
+
+
 parser = argparse.ArgumentParser(description="Opis naszej aplikacji")
 parser.add_argument('-u', '--user', type=str, help="Pomoc komendy. Użycie -u login")
 parser.add_argument('-p', '--password', type=str, help="Pomoc komendy. Użycie -p hasło")
@@ -10,10 +21,13 @@ parser.add_argument('-a', '--aaa', type=str, help="Pomoc komendy. Użycie -p has
 
 args = parser.parse_args()
 
+
+
+
 if __name__ == '__main__':
     connection = get_connection()
     cursor = get_cursor(connection)
-
+    print("dupa")
     if args.user and args.password:
         print(f"Podany login: {args.user} a podane hasło to: {args.password}")
 

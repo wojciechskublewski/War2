@@ -14,6 +14,8 @@ from clcrypto import password_hash
 # );
 
 
+
+
 class User:
     __id = None
     username = None
