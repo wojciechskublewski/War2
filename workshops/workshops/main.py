@@ -3,17 +3,17 @@ import argparse
 from clcrypto import check_password
 from database import get_connection, get_cursor
 
-u = User()
-u.email = "test@wp.pl"
-u.username = "test"
-u.set_password("Wojtek123")
-
-connection = get_connection()
-cursor = get_cursor(connection)
-
-u.save_to_db(cursor)
-
-connection.close()
+# u = User()
+# u.email = "test@wp.pl"
+# u.username = "test"
+# u.set_password("Wojtek123")
+#
+# connection = get_connection()
+# cursor = get_cursor(connection)
+#
+# u.save_to_db(cursor)
+#
+# connection.close()
 
 
 
