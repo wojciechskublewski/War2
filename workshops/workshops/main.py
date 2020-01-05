@@ -30,7 +30,6 @@ if __name__ == '__main__':
     print("dupa")
     if args.user and args.password:
         print(f"Podany login: {args.user} a podane hasło to: {args.password}")
-
         loaded_user = User.load_user_by_username(cursor, args.user)
         if loaded_user and check_password(args.password, loaded_user.hashed_password):
             print("Poprawne dane")
